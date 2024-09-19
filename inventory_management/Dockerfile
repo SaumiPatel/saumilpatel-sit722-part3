@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ .
 
 # Expose port 80 to make the service accessible from outside the container
-EXPOSE 80
+EXPOSE 81
 
 # Run the application using Uvicorn, setting the host to 0.0.0.0 (to allow external connections) and the port to 80
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "81"]
